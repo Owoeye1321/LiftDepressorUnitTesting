@@ -4,14 +4,14 @@
     "/Users/mac/Desktop/MyApplications/LiftDepression/LiftDepressionUnitTesting/LiftDepressionUnitTesting.csproj": {}
   },
   "projects": {
-    "/Users/mac/Desktop/MyApplications/LiftDepression/LiftDepressionUnitTesting/LiftDepressionUnitTesting.csproj": {
+    "/Users/mac/Desktop/MyApplications/LiftDepression/LiftDepression/LiftDepression.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mac/Desktop/MyApplications/LiftDepression/LiftDepressionUnitTesting/LiftDepressionUnitTesting.csproj",
-        "projectName": "LiftDepressionUnitTesting",
-        "projectPath": "/Users/mac/Desktop/MyApplications/LiftDepression/LiftDepressionUnitTesting/LiftDepressionUnitTesting.csproj",
+        "projectUniqueName": "/Users/mac/Desktop/MyApplications/LiftDepression/LiftDepression/LiftDepression.csproj",
+        "projectName": "LiftDepression",
+        "projectPath": "/Users/mac/Desktop/MyApplications/LiftDepression/LiftDepression/LiftDepression.csproj",
         "packagesPath": "/Users/mac/.nuget/packages/",
-        "outputPath": "/Users/mac/Desktop/MyApplications/LiftDepression/LiftDepressionUnitTesting/obj/",
+        "outputPath": "/Users/mac/Desktop/MyApplications/LiftDepression/LiftDepression/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mac/.nuget/NuGet/NuGet.Config"
@@ -38,6 +38,80 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mac/Desktop/MyApplications/LiftDepression/LiftDepressionUnitTesting/LiftDepressionUnitTesting.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mac/Desktop/MyApplications/LiftDepression/LiftDepressionUnitTesting/LiftDepressionUnitTesting.csproj",
+        "projectName": "LiftDepressionUnitTesting",
+        "projectPath": "/Users/mac/Desktop/MyApplications/LiftDepression/LiftDepressionUnitTesting/LiftDepressionUnitTesting.csproj",
+        "packagesPath": "/Users/mac/.nuget/packages/",
+        "outputPath": "/Users/mac/Desktop/MyApplications/LiftDepression/LiftDepressionUnitTesting/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/mac/Desktop/MyApplications/LiftDepression/LiftDepression/LiftDepression.csproj": {
+                "projectPath": "/Users/mac/Desktop/MyApplications/LiftDepression/LiftDepression/LiftDepression.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "FakeItEasy": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.7.1, )"
