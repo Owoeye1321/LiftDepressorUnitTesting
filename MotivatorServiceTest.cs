@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using FakeItEasy;
+using FluentAssertions;
 using LiftDepression.Controllers;
 using LiftDepression.Interface;
+using Microsoft.AspNetCore.Mvc;
+
 namespace LiftDepressionUnitTesting
 {
 	public class MotivatorServiceTest
@@ -28,14 +32,16 @@ namespace LiftDepressionUnitTesting
 			//Arrange
 			IEnumerable<IGetMotivationResponse> quote = A.Fake<IEnumerable<IGetMotivationResponse>>();
 			A.CallTo(() => _motivatorService.GetAllQuotes()).Returns(quote);
+			int successCode = (int)HttpStatusCode.OK;
 
 
-			//Act
-			var result = motivatorController.GetAllQuote();
-
+            //Act
+            var result = motivatorController.GetAllQuote();
+			Console.WriteLine(result);
 
 			//Assert
-
+			result.Should().NotBeNull();
+			
 		}
 
 
