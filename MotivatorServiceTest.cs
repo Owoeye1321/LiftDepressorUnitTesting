@@ -36,8 +36,8 @@ namespace LiftDepressionUnitTesting
 
 
             //Act
-            var result = motivatorController.GetAllQuote();
-			Console.WriteLine(result);
+            IActionResult result = motivatorController.GetAllQuote();
+			
 
 			//Assert
 			result.Should().NotBeNull();
