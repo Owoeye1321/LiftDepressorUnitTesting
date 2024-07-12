@@ -27,7 +27,7 @@ namespace LiftDepressionUnitTesting
 
 		[Fact]
 
-		public void MotivatorController_GetAllQuotes_ReturnsIEnumerableIGetMotivationResponse()
+		public async void MotivatorController_GetAllQuotes_ReturnsIEnumerableIGetMotivationResponse()
 		{
 			//Arrange
 			IEnumerable<IGetMotivationResponse> quote = A.Fake<IEnumerable<IGetMotivationResponse>>();
@@ -36,11 +36,17 @@ namespace LiftDepressionUnitTesting
 
 
             //Act
-            IActionResult result = motivatorController.GetAllQuote();
-			
+            IActionResult result = await motivatorController.GetAllQuote();
+            Console.WriteLine(result);
 
-			//Assert
-			result.Should().NotBeNull();
+            //Assert
+            result.Should().NotBeNull();
+			var OkResult = result.Should().BeOfType<OkObjectResult>().Which;
+			var objectResult = OkResult.Value.Should().BeOfType<AllQuoteResponseData>().Which;
+
+
+			objectResult.Code.Should().Be(HttpStatusCode.OK);
+			
 			
 		}
 
