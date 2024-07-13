@@ -49,7 +49,6 @@ namespace LiftDepressionUnitTesting
 			objectResult.Message.Should().Be("success");
 			objectResult.Data.Should().NotBeNullOrEmpty();
 					
-			
 		}
 
 
