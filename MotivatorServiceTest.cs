@@ -46,7 +46,9 @@ namespace LiftDepressionUnitTesting
 
 
 			objectResult.Code.Should().Be(HttpStatusCode.OK);
-			
+			objectResult.Message.Should().Be("success");
+			objectResult.Data.Should().NotBeNullOrEmpty();
+					
 			
 		}
 
